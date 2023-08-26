@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if ls moshe &>/dev/null
+then
+touch ./moshe/x
+else
+mkdir ./david && touch ./david/y 

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Declare an associative array
+declare -A myArray
+
+# Populate the array with key-value pairs
+myArray["james"]="tall"
+myArray["jane"]="short"
+myArray["adam"]="tall"
+myArray["dor"]="average"
+
+# Search the array for keys with the entry "tall"
+for key in "${!myArray[@]}"; do
+  if [[ "${myArray[$key]}" == "tall" ]]; then
+    echo "$key is tall"
+  fi
+done
+
